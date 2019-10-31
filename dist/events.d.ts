@@ -1,0 +1,10 @@
+import { IDictionary } from './idictionary';
+import { ValidationEvent } from './validation-event';
+import { AbstractControl } from './abstract-control';
+import { FormControl } from './form-control';
+import { FormGroup } from './form-group';
+export declare type AbstractControls = IDictionary<AbstractControl | AbstractControl[]>;
+export declare type UpdateValidValueHandler<TEntity> = (val: TEntity) => void;
+export declare type ValidatorFunctionFormControlHandler<TEntity> = (control: FormControl<TEntity>) => Promise<ValidationEvent[]>;
+export declare type ValidatorFunctionFormGroupHandler<TAbstractControls extends AbstractControls> = (control: FormGroup<TAbstractControls>) => Promise<ValidationEvent[]>;
+export declare type ValidatorFunctionFormArrayHandler<TAbstractControl extends AbstractControl> = (control: TAbstractControl[]) => Promise<ValidationEvent[]>;

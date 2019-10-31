@@ -62,7 +62,6 @@ typings/
 .vscode
 
 # build
-dist
 .awcache
 .out
 yarn.lock
